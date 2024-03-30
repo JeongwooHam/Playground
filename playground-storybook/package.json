@@ -12,6 +12,7 @@
     "build-storybook": "storybook build"
   },
   "dependencies": {
+    "@fontsource/noto-sans": "^5.0.21",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },
