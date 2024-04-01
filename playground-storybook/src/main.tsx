@@ -2,7 +2,6 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import App from "./App.tsx";
 import "./index.css";
-import "@fontsource/noto-sans";
 import "@fontsource/noto-sans/400.css";
 import "@fontsource/noto-sans/700.css";
 
