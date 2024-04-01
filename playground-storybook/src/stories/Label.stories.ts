@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from "@storybook/react";
-import Label from "../components/label/Label";
+import Label from "../components/Label";
 
 const meta = {
   title: "Text/Label",
@@ -17,7 +17,7 @@ const meta = {
 export default meta;
 type Story = StoryObj<typeof meta>;
 
-export const Primary: Story = {
+export const Default: Story = {
   args: {
     htmlFor: "email",
     children: "이메일",

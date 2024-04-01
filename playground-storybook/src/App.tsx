@@ -1,39 +1,48 @@
 import { useState } from "react";
-import reactLogo from "./assets/react.svg";
-import viteLogo from "/vite.svg";
 import "./App.css";
+import Label from "./components/Label";
+import TextField from "./components/TextField";
 
 function App() {
-  const [count, setCount] = useState(0);
-
+  const [isError, setIsError] = useState(false);
   return (
-    <>
+    <div>
       <div>
-        <a href='https://vitejs.dev' target='_blank'>
-          <img src={viteLogo} className='logo' alt='Vite logo' />
-        </a>
-        <a href='https://react.dev' target='_blank'>
-          <img src={reactLogo} className='logo react' alt='React logo' />
-        </a>
+        <Label htmlFor='email'>email</Label>
+        <TextField
+          id='email'
+          placeholder='이메일을 입력하세요'
+          value=''
+          errorMessage='이메일을 확인해주세요'
+          isError={isError}
+          iconPath='/icons/delete_button.svg'
+          iconAlt='delete'
+          onChange={() => {}}
+          onIconClick={() => {}}
+        />
       </div>
-      <h1 className='text-primary text-3xl font-bold underline'>
-        Vite + React
-      </h1>
-      <div className='card'>
-        <button
-          onClick={() => setCount((count) => count + 1)}
-          className='text-secondary'
-        >
-          count is {count}
-        </button>
-        <p className='text-social'>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
+      <div className='my-10'></div>
+      <div>
+        <Label htmlFor='password'>password</Label>
+        <TextField
+          id='password'
+          placeholder='비밀번호를 입력하세요'
+          value=''
+          errorMessage='비밀번호를 확인해주세요'
+          isError={isError}
+          iconPath='/icons/delete_button.svg'
+          iconAlt='delete'
+          onChange={() => {}}
+          onIconClick={() => {}}
+        />
       </div>
-      <p className='read-the-docs text-tertiary'>
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
+      <button
+        className='mt-10 bg-social hover:bg-error px-5 py-2 rounded-tag-button'
+        onClick={() => setIsError((prev) => !prev)}
+      >
+        🚨🚨🚨
+      </button>
+    </div>
   );
 }
 
