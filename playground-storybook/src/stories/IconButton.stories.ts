@@ -9,10 +9,9 @@ const meta = {
   },
   tags: ["autodocs"],
   argTypes: {
-    alt: { control: "text", description: "버튼 내부 이미지 alt 속성" },
     iconPath: {
       control: "text",
-      description: "버튼 내부 이미지 경로",
+      description: "버튼 아이콘 키 값",
       defaultValue: "",
     },
     onClick: { action: "clicked", description: "버튼 onClick 이벤트" },
@@ -24,8 +23,8 @@ type Story = StoryObj<typeof meta>;
 
 export const Default: Story = {
   args: {
-    alt: "icon",
-    iconPath: "/icons/close_button.svg",
+    iconPath: "CLOSE",
+    iconStyle: "",
     onClick: () => console.log("button clicked"),
   },
 };

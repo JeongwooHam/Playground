@@ -2,6 +2,7 @@ import { useState } from "react";
 import "./App.css";
 import Label from "./components/Label";
 import TextField from "./components/TextField";
+import TagList from "./components/Tag/TagList";
 
 function App() {
   const [isError, setIsError] = useState(false);
@@ -42,6 +43,10 @@ function App() {
       >
         🚨🚨🚨
       </button>
+      <TagList
+        tagList={["JavaScript", "React", "TypeScript", "Next.js"]}
+        onTagClick={console.log}
+      />
     </div>
   );
 }

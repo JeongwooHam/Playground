@@ -15,3 +15,12 @@ input {
     position: absolute;
   }
 }
+
+@layer components {
+  .nav-bar > button {
+    @apply block;
+  }
+  .nav-title-wrapper > button {
+    @apply mr-[7px];
+  }
+}
