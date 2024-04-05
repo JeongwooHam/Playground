@@ -39,6 +39,7 @@ const TextField = ({
         className={`text-primary border-b ${borderColor()}`}
       >
         <input
+          data-testid={id}
           id={id}
           type='text'
           placeholder={placeholder}

@@ -6,6 +6,8 @@ interface ButtonProps extends PropsWithChildren {
   isDisabled: boolean;
   onClick?: MouseEventHandler<HTMLButtonElement>;
   theme: ButtonTheme;
+  buttonStyle?: string;
+  buttonName?: string;
 }
 
 const primary = "bg-primary text-white";
@@ -26,13 +28,16 @@ const PrimaryButton = ({
   isDisabled,
   theme,
   children,
+  buttonStyle,
+  buttonName,
   ...props
 }: ButtonProps) => {
   return (
     <button
       type='button'
-      className={`w-full h-[60px] rounded-button-default ${disabled} ${COLOR[theme]}`}
+      className={`w-full h-[60px] rounded-button-default ${disabled} ${COLOR[theme]} ${buttonStyle}`}
       disabled={isDisabled}
+      name={buttonName}
       {...props}
     >
       {children}
