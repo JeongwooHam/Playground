@@ -11,7 +11,7 @@ interface IconButtonProps {
 const IconButton = ({ iconPath, iconStyle, onClick }: IconButtonProps) => {
   const Icon = ICONS[iconPath];
   return (
-    <button onClick={onClick} className={iconStyle}>
+    <button onClick={onClick} className={iconStyle} aria-label={iconPath}>
       <Icon />
     </button>
   );

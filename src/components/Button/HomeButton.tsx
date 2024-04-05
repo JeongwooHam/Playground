@@ -20,9 +20,9 @@ const THEME: Record<ButtonTheme, string> = {
 
 const HomeButton = ({ buttonTheme, onClick }: HomeButtonProps) => {
   return (
-    <button className={`rounded-button-default p-3 ${THEME[buttonTheme]}`}>
+    <div className={`rounded-button-default p-3 ${THEME[buttonTheme]}`}>
       <IconButton iconPath='HOME' onClick={onClick} />
-    </button>
+    </div>
   );
 };
 
