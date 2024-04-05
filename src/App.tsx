@@ -16,8 +16,7 @@ function App() {
           value=''
           errorMessage='이메일을 확인해주세요'
           isError={isError}
-          iconPath='/icons/delete_button.svg'
-          iconAlt='delete'
+          iconPath='CLOSE'
           onChange={() => {}}
           onIconClick={() => {}}
         />
@@ -31,8 +30,7 @@ function App() {
           value=''
           errorMessage='비밀번호를 확인해주세요'
           isError={isError}
-          iconPath='/icons/delete_button.svg'
-          iconAlt='delete'
+          iconPath='CLOSE'
           onChange={() => {}}
           onIconClick={() => {}}
         />

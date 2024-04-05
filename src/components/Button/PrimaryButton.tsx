@@ -22,7 +22,12 @@ const COLOR: Record<ButtonTheme, string> = {
   disabled,
 };
 
-const Button = ({ isDisabled, theme, children, ...props }: ButtonProps) => {
+const PrimaryButton = ({
+  isDisabled,
+  theme,
+  children,
+  ...props
+}: ButtonProps) => {
   return (
     <button
       type='button'
@@ -35,4 +40,4 @@ const Button = ({ isDisabled, theme, children, ...props }: ButtonProps) => {
   );
 };
 
-export default Button;
+export default PrimaryButton;

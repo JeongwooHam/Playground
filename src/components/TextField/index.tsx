@@ -1,12 +1,12 @@
 import { useState } from "react";
 import ErrorMessage from "./ErrorMessage";
-import IconButton from "./IconButton";
+import IconButton from "../Button/IconButton";
+import ICONS from "../../constants/icons";
 
 interface TextFieldProps {
   id: string;
   errorMessage: string;
-  iconAlt: string;
-  iconPath: string;
+  iconPath: keyof typeof ICONS;
   onIconClick: React.MouseEventHandler<HTMLButtonElement>;
   placeholder: string;
   onChange: React.ChangeEventHandler<HTMLInputElement>;
@@ -17,7 +17,6 @@ interface TextFieldProps {
 const TextField = ({
   id,
   errorMessage,
-  iconAlt,
   iconPath,
   onIconClick,
   placeholder,
@@ -46,9 +45,7 @@ const TextField = ({
           onChange={onChange}
           value={value}
         />
-        {!!value && (
-          <IconButton onClick={onIconClick} alt={iconAlt} iconPath={iconPath} />
-        )}
+        {!!value && <IconButton onClick={onIconClick} iconPath={iconPath} />}
       </div>
       {isError && <ErrorMessage>{errorMessage}</ErrorMessage>}
     </div>

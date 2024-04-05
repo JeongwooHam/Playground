@@ -1,10 +1,10 @@
 import type { Meta, StoryObj } from "@storybook/react";
 import { fn } from "@storybook/test";
-import Button from "../components/Button";
+import PrimaryButton from "../components/Button/PrimaryButton";
 
 const meta = {
   title: "Button/Button",
-  component: Button,
+  component: PrimaryButton,
   parameters: {
     layout: "centered",
   },
@@ -33,7 +33,7 @@ const meta = {
   // 컴포넌트 내부에서 optional로 설정해줄 수 있지만
   // 이벤트 핸들링을 위해 존재하는 컴포넌트이므로 이벤트 핸들러를 optional로 받기 보다는 args를 추가하는 것이 적절해보인다.
   args: { onClick: fn() },
-} satisfies Meta<typeof Button>;
+} satisfies Meta<typeof PrimaryButton>;
 
 export default meta;
 type Story = StoryObj<typeof meta>;

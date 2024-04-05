@@ -115,7 +115,7 @@ export default {
 
 > CLS 점수
 
-<img src="https://wit.nts-corp.com/wp-content/uploads/2020/12/02.png" alt="CLS 점수"/>
+<img src="https://marfeel.anticipa.io/public/uploads/marfeel/image/wysiwyg/21_10_2020_09_28_34_Screenshot_2020_10_21_at_09.28.21.png" alt="CLS 점수"/>
 
 - 일정 기간 동안 레이아웃 이동이 없는 상태에서 발생하는 예상하지 않은 레이아웃 이동에 대한 누적된 점수
 - 뷰포트에서 이동한 콘텐츠의 양과 영향을 받은 요소가 이동한 거리를 고려하여 산정된다.

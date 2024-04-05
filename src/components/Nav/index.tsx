@@ -1,5 +1,5 @@
 import type { MouseEventHandler } from "react";
-import IconButton from "../TextField/IconButton";
+import IconButton from "../Button/IconButton";
 
 interface NavProps {
   isBackBtnShown: boolean;
